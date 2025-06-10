@@ -2,7 +2,7 @@ import React from 'react';
 import { FiCreditCard, FiShield, FiCheck } from 'react-icons/fi';
 
 export default function PaymentSection() {
-  // Mock data - in real app, this would come from your backend
+  // AI-TODO: Mock data - in real app, this would come from your backend
   const customerData = {
     tier: 'silver',
     amount: 500,

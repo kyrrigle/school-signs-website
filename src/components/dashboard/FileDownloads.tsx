@@ -2,7 +2,7 @@ import React from 'react';
 import { FiDownload, FiEye, FiFileText, FiPackage } from 'react-icons/fi';
 
 export default function FileDownloads() {
-  // Mock data - in real app, this would come from your backend
+  // AI-TODO: Mock data - in real app, this would come from your backend
   const files = [
     {
       id: 1,

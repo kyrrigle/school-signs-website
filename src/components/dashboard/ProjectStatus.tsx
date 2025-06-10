@@ -2,7 +2,7 @@ import React from 'react';
 import { FiCheckCircle, FiClock, FiUpload, FiDownload } from 'react-icons/fi';
 
 export default function ProjectStatus() {
-  // Mock data - in real app, this would come from your backend
+  // AI-TODO: Mock data - in real app, this would come from your backend
   const projectStatus = {
     step: 2, // Current step (0-indexed)
     contactSheetApproved: false,

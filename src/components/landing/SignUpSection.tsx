@@ -16,7 +16,7 @@ export default function SignUpSection() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // AI-TODO: Simulate form submission
     setTimeout(() => {
       setSubmitMessage('Thank you! We\'ll send you a magic link to get started.');
       setIsSubmitting(false);

@@ -14,6 +14,7 @@ export default function Login() {
     setMessage('');
 
     try {
+      // AI-TODO: Move this to server side so we can check if the user has previously registered
       const { error } = await supabase.auth.signInWithOtp({
         email,
         options: {

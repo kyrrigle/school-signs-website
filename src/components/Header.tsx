@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FaGraduationCap } from 'react-icons/fa';
 import { FiUser, FiLogOut } from 'react-icons/fi';
@@ -7,12 +7,25 @@ import { FiUser, FiLogOut } from 'react-icons/fi';
 export default function Header() {
   const { user, signOut } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSignOut = async () => {
     try {
       await signOut();
     } catch (error) {
       console.error('Error signing out:', error);
+    }
+  };
+
+  const handlePricingClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      const el = document.getElementById('pricing');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate('/', { state: { scrollTo: 'pricing' } });
     }
   };
 
@@ -66,12 +79,13 @@ export default function Header() {
               </>
             ) : (
               <>
-                <Link
-                  to="/#pricing"
-                  className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+                <button
+                  onClick={handlePricingClick}
+                  className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors bg-transparent border-none cursor-pointer"
+                  type="button"
                 >
                   Pricing
-                </Link>
+                </button>
                 <Link
                   to="/login"
                   className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
