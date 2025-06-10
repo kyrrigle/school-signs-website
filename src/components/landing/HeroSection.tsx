@@ -1,7 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiCalendar, FiArrowRight, FiClock, FiDollarSign } from 'react-icons/fi';
 
 export default function HeroSection() {
+  // Array of hero images
+  const heroImages = [
+    "/hero-sign-1.jpg",
+    "/hero-sign-2.jpg",
+    "/hero-sign-3.jpg"
+    // Add more images as needed
+  ];
+  const [currentImage, setCurrentImage] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // Start fade out
+      setTimeout(() => {
+        setCurrentImage((prev) => (prev + 1) % heroImages.length);
+        setFade(true); // Fade in new image
+      }, 400); // Fade out duration
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
   return (
     <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,11 +78,13 @@ export default function HeroSection() {
           
           <div className="relative">
             <div className="bg-white rounded-2xl shadow-2xl p-8">
-              <img
-                src="https://images.pexels.com/photos/7713176/pexels-photo-7713176.jpeg?auto=compress&cs=tinysrgb&w=600"
-                alt="Graduation yard sign example"
-                className="w-full h-80 object-cover rounded-lg"
-              />
+              <div className="w-full aspect-[4/3]">
+                <img
+                  src={heroImages[currentImage]}
+                  alt={`Graduation yard sign ${currentImage + 1}`}
+                  className={`w-full h-full object-contain rounded-lg transition-opacity duration-400 ${fade ? 'opacity-100' : 'opacity-0'}`}
+                />
+              </div>
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">Professional, personalized signs</p>
                 <p className="text-sm text-gray-600">delivered print-ready</p>

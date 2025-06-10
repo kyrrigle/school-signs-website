@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <FaGraduationCap className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">SignCraft</span>
+              <span className="text-xl font-bold">ClassYardSigns</span>
             </div>
             <p className="text-gray-300 max-w-md">
               Helping schools save time and money with automated graduation yard sign production. 
@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <FiMail className="h-4 w-4 text-blue-400" />
-                <span className="text-gray-300">hello@signcraft.com</span>
+                <span className="text-gray-300">hello@ClassYardSigns.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <FiPhone className="h-4 w-4 text-blue-400" />
@@ -50,7 +50,7 @@ export default function Footer() {
         
         <div className="border-t border-gray-800 pt-8 mt-8">
           <p className="text-center text-gray-400">
-            © 2025 SignCraft. All rights reserved.
+            © 2025 ClassYardSigns. All rights reserved.
           </p>
         </div>
       </div>
