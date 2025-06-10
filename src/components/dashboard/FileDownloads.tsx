@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Eye, FileText, Package } from 'lucide-react';
+import { FiDownload, FiEye, FiFileText, FiPackage } from 'react-icons/fi';
 
 export default function FileDownloads() {
   // Mock data - in real app, this would come from your backend
@@ -57,13 +57,13 @@ export default function FileDownloads() {
           const getIcon = (type: string) => {
             switch (type) {
               case 'contact_sheet':
-                return Eye;
+                return FiEye;
               case 'final_assets':
-                return FileText;
+                return FiFileText;
               case 'delivery_bundles':
-                return Package;
+                return FiPackage;
               default:
-                return FileText;
+                return FiFileText;
             }
           };
           
@@ -110,7 +110,7 @@ export default function FileDownloads() {
                         onClick={() => handleDownload(file)}
                         className="inline-flex items-center space-x-1 px-3 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-md hover:bg-blue-100 transition-colors"
                       >
-                        <Download className="h-4 w-4" />
+                        <FiDownload className="h-4 w-4" />
                         <span>Download</span>
                       </button>
                       

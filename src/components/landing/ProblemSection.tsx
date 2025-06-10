@@ -1,28 +1,28 @@
 import React from 'react';
-import { AlertCircle, Clock, DollarSign, Users } from 'lucide-react';
+import { FiAlertCircle, FiClock, FiDollarSign, FiUsers } from 'react-icons/fi';
 
 export default function ProblemSection() {
   const problems = [
     {
-      icon: DollarSign,
+      icon: FiDollarSign,
       title: '$700 in Setup Fees',
       description: 'Print shops charge expensive setup fees for design preparation and file formatting.',
       color: 'text-red-600 bg-red-100'
     },
     {
-      icon: Clock,
+      icon: FiClock,
       title: '15-20 Hours of Work',
       description: 'Volunteers spend entire weekends cropping photos, laying out designs, and exporting files.',
       color: 'text-orange-600 bg-orange-100'
     },
     {
-      icon: Users,
+      icon: FiUsers,
       title: 'Error-Prone Process',
       description: 'Manual workflows lead to typos, wrong photos, and last-minute corrections that stress everyone.',
       color: 'text-yellow-600 bg-yellow-100'
     },
     {
-      icon: AlertCircle,
+      icon: FiAlertCircle,
       title: 'Delivery Chaos',
       description: 'Volunteers drive all over town with no optimized routes, wasting time and gas money.',
       color: 'text-purple-600 bg-purple-100'

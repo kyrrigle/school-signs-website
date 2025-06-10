@@ -1,28 +1,29 @@
 import React from 'react';
-import { CheckCircle, Upload, Eye, Download, Truck } from 'lucide-react';
+import { FiCheckCircle, FiUpload, FiEye, FiDownload } from 'react-icons/fi';
+import { FaTruck } from 'react-icons/fa';
 
 export default function SolutionSection() {
   const steps = [
     {
-      icon: Upload,
+      icon: FiUpload,
       title: 'Upload Your Assets',
       description: 'Send us your student roster (CSV), photos, and school branding via secure link. Takes 5 minutes.',
       color: 'text-blue-600 bg-blue-100'
     },
     {
-      icon: Eye,
+      icon: FiEye,
       title: 'Review Proofs',
       description: 'Within one week, we deliver a PDF contact sheet of all signs for your approval.',
       color: 'text-green-600 bg-green-100'
     },
     {
-      icon: CheckCircle,
+      icon: FiCheckCircle,
       title: 'Approve & Pay',
       description: 'Make any corrections, approve the final design, and complete payment through our secure portal.',
       color: 'text-purple-600 bg-purple-100'
     },
     {
-      icon: Download,
+      icon: FiDownload,
       title: 'Get Print Files',
       description: 'Receive print-ready PDFs and delivery bundles—take them to any print shop, no setup fees.',
       color: 'text-amber-600 bg-amber-100'
@@ -33,6 +34,7 @@ export default function SolutionSection() {
     'No more cropping photos or laying out designs',
     'Professional, consistent results every time',
     'Optimized delivery routes save time and gas',
+    // If you want to use the truck icon somewhere, use <FaTruck />
     'Print-ready files work with any vendor',
     'Secure handling of student information',
     'Fast turnaround: proofs in 1 week, finals in 1-2 days'
@@ -82,7 +84,7 @@ export default function SolutionSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <FiCheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
                 <span className="text-gray-700">{benefit}</span>
               </div>
             ))}

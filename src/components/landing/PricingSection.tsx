@@ -1,5 +1,5 @@
 import React from 'react';
-import { Check, ArrowRight } from 'lucide-react';
+import { FiCheck, FiArrowRight } from 'react-icons/fi';
 
 export default function PricingSection() {
   const plans = [
@@ -78,7 +78,7 @@ export default function PricingSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center space-x-3">
-                <Check className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <FiCheck className="h-5 w-5 text-green-600 flex-shrink-0" />
                 <span className="text-gray-700">{feature}</span>
               </div>
             ))}
@@ -99,7 +99,7 @@ export default function PricingSection() {
               className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg"
             >
               <span>Get Started Today</span>
-              <ArrowRight className="h-5 w-5" />
+              <FiArrowRight className="h-5 w-5" />
             </a>
           </div>
         </div>

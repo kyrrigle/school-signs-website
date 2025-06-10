@@ -1,5 +1,6 @@
 import React from 'react';
-import { Star, Quote } from 'lucide-react';
+import { FiStar } from 'react-icons/fi';
+import { FaQuoteLeft } from 'react-icons/fa';
 
 export default function TestimonialSection() {
   return (
@@ -17,11 +18,11 @@ export default function TestimonialSection() {
         <div className="bg-white rounded-2xl p-8 lg:p-12 shadow-2xl max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
             {[...Array(5)].map((_, i) => (
-              <Star key={i} className="h-6 w-6 text-yellow-400 fill-current" />
+              <FiStar key={i} className="h-6 w-6 text-yellow-400 fill-current" />
             ))}
           </div>
           
-          <Quote className="h-12 w-12 text-blue-200 mx-auto mb-6" />
+          <FaQuoteLeft className="h-12 w-12 text-blue-200 mx-auto mb-6" />
           
           <blockquote className="text-xl text-gray-700 text-center leading-relaxed mb-8">
             "We saved <strong>$700</strong> and finished our senior sign prep in just <strong>45 minutes</strong> 

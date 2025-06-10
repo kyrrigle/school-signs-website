@@ -1,5 +1,6 @@
 import React from 'react';
-import { GraduationCap, Mail, Phone } from 'lucide-react';
+import { FaGraduationCap } from 'react-icons/fa';
+import { FiMail, FiPhone } from 'react-icons/fi';
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <GraduationCap className="h-8 w-8 text-blue-400" />
+              <FaGraduationCap className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold">SignCraft</span>
             </div>
             <p className="text-gray-300 max-w-md">
@@ -21,11 +22,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-blue-400" />
+                <FiMail className="h-4 w-4 text-blue-400" />
                 <span className="text-gray-300">hello@signcraft.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-blue-400" />
+                <FiPhone className="h-4 w-4 text-blue-400" />
                 <span className="text-gray-300">(555) 123-4567</span>
               </div>
             </div>

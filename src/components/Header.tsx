@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { GraduationCap, User, LogOut } from 'lucide-react';
+import { FaGraduationCap } from 'react-icons/fa';
+import { FiUser, FiLogOut } from 'react-icons/fi';
 
 export default function Header() {
   const { user, signOut } = useAuth();
@@ -20,7 +21,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <GraduationCap className="h-8 w-8 text-blue-600" />
+            <FaGraduationCap className="h-8 w-8 text-blue-600" />
             <span className="text-xl font-bold text-gray-900">
               SignCraft
             </span>
@@ -41,7 +42,7 @@ export default function Header() {
                 </Link>
                 <div className="relative group">
                   <button className="flex items-center space-x-1 text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
-                    <User className="h-4 w-4" />
+                    <FiUser className="h-4 w-4" />
                     <span>Account</span>
                   </button>
                   <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
@@ -56,7 +57,7 @@ export default function Header() {
                         onClick={handleSignOut}
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center space-x-2"
                       >
-                        <LogOut className="h-4 w-4" />
+                        <FiLogOut className="h-4 w-4" />
                         <span>Sign Out</span>
                       </button>
                     </div>

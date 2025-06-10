@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Shield, Clock } from 'lucide-react';
+import { FiCalendar, FiShield, FiClock } from 'react-icons/fi';
 
 export default function SignUpSection() {
   const [formData, setFormData] = useState({
@@ -154,7 +154,7 @@ export default function SignUpSection() {
             
             <div className="space-y-8">
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <Calendar className="h-8 w-8 text-blue-600 mb-4" />
+                <FiCalendar className="h-8 w-8 text-blue-600 mb-4" />
                 <h4 className="font-semibold text-gray-900 mb-2">Prefer to Talk First?</h4>
                 <p className="text-gray-600 mb-4">
                   Schedule a 15-minute call to discuss your school's needs and see examples.
@@ -170,7 +170,7 @@ export default function SignUpSection() {
               </div>
               
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <Shield className="h-8 w-8 text-green-600 mb-4" />
+                <FiShield className="h-8 w-8 text-green-600 mb-4" />
                 <h4 className="font-semibold text-gray-900 mb-2">Secure & Private</h4>
                 <p className="text-gray-600">
                   Student data is encrypted, handled securely, and automatically deleted 
@@ -179,7 +179,7 @@ export default function SignUpSection() {
               </div>
               
               <div className="bg-white rounded-xl p-6 shadow-md">
-                <Clock className="h-8 w-8 text-purple-600 mb-4" />
+                <FiClock className="h-8 w-8 text-purple-600 mb-4" />
                 <h4 className="font-semibold text-gray-900 mb-2">Fast Turnaround</h4>
                 <p className="text-gray-600">
                   Proofs delivered within 1 week of receiving your assets. 

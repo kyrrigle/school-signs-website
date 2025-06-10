@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, ArrowLeft } from 'lucide-react';
+import { FiMail, FiArrowLeft } from 'react-icons/fi';
 import { supabase } from '../lib/supabase';
 
 export default function Login() {
@@ -40,7 +40,7 @@ export default function Login() {
               to="/"
               className="inline-flex items-center text-sm text-gray-600 hover:text-gray-900 mb-4"
             >
-              <ArrowLeft className="h-4 w-4 mr-1" />
+              <FiArrowLeft className="h-4 w-4 mr-1" />
               Back to home
             </Link>
             <h2 className="text-2xl font-bold text-gray-900">Sign In</h2>
@@ -80,7 +80,7 @@ export default function Login() {
               disabled={loading || !email}
               className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
             >
-              <Mail className="h-5 w-5" />
+              <FiMail className="h-5 w-5" />
               <span>{loading ? 'Sending...' : 'Send Login Link'}</span>
             </button>
           </form>

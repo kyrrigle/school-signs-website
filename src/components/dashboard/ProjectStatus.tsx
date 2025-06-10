@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, Clock, Upload, Download } from 'lucide-react';
+import { FiCheckCircle, FiClock, FiUpload, FiDownload } from 'react-icons/fi';
 
 export default function ProjectStatus() {
   // Mock data - in real app, this would come from your backend
@@ -14,7 +14,7 @@ export default function ProjectStatus() {
       id: 1,
       title: 'Assets Uploaded',
       description: 'Your student photos and roster have been received',
-      icon: Upload,
+      icon: FiUpload,
       completed: true,
       current: false
     },
@@ -22,7 +22,7 @@ export default function ProjectStatus() {
       id: 2,
       title: 'Contact Sheet Ready',
       description: 'Review and approve your proof sheet',
-      icon: Clock,
+      icon: FiClock,
       completed: false,
       current: true
     },
@@ -30,7 +30,7 @@ export default function ProjectStatus() {
       id: 3,
       title: 'Payment Complete',
       description: 'Project fee payment processed',
-      icon: CheckCircle,
+      icon: FiCheckCircle,
       completed: false,
       current: false
     },
@@ -38,7 +38,7 @@ export default function ProjectStatus() {
       id: 4,
       title: 'Final Files Ready',
       description: 'Download your print-ready sign files',
-      icon: Download,
+      icon: FiDownload,
       completed: false,
       current: false
     }
@@ -90,7 +90,7 @@ export default function ProjectStatus() {
               </div>
               
               {step.completed && (
-                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                <FiCheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
               )}
             </div>
           );

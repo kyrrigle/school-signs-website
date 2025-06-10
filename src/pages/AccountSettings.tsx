@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { User, School, Mail, Phone, Globe, Save } from 'lucide-react';
+import { FiUser, FiMail, FiPhone, FiGlobe, FiSave } from 'react-icons/fi';
+import { FaSchool } from 'react-icons/fa';
 
 export default function AccountSettings() {
   const { user } = useAuth();
@@ -64,7 +65,7 @@ export default function AccountSettings() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  <User className="h-4 w-4 inline mr-1" />
+                  <FiUser className="h-4 w-4 inline mr-1" />
                   Full Name
                 </label>
                 <input
@@ -79,7 +80,7 @@ export default function AccountSettings() {
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  <Mail className="h-4 w-4 inline mr-1" />
+                  <FiMail className="h-4 w-4 inline mr-1" />
                   Email Address
                 </label>
                 <input
@@ -94,7 +95,7 @@ export default function AccountSettings() {
 
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                  <Phone className="h-4 w-4 inline mr-1" />
+                  <FiPhone className="h-4 w-4 inline mr-1" />
                   Phone Number
                 </label>
                 <input
@@ -109,7 +110,7 @@ export default function AccountSettings() {
 
               <div>
                 <label htmlFor="schoolName" className="block text-sm font-medium text-gray-700 mb-2">
-                  <School className="h-4 w-4 inline mr-1" />
+                  <FaSchool className="h-4 w-4 inline mr-1" />
                   School Name
                 </label>
                 <input
@@ -125,7 +126,7 @@ export default function AccountSettings() {
 
             <div>
               <label htmlFor="schoolWebsite" className="block text-sm font-medium text-gray-700 mb-2">
-                <Globe className="h-4 w-4 inline mr-1" />
+                <FiGlobe className="h-4 w-4 inline mr-1" />
                 School Website
               </label>
               <input
@@ -144,7 +145,7 @@ export default function AccountSettings() {
                 disabled={isUpdating}
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
               >
-                <Save className="h-5 w-5" />
+                <FiSave className="h-5 w-5" />
                 <span>{isUpdating ? 'Updating...' : 'Save Changes'}</span>
               </button>
             </div>

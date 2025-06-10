@@ -1,5 +1,5 @@
 import React from 'react';
-import { CreditCard, Shield, Check } from 'lucide-react';
+import { FiCreditCard, FiShield, FiCheck } from 'react-icons/fi';
 
 export default function PaymentSection() {
   // Mock data - in real app, this would come from your backend
@@ -73,7 +73,7 @@ export default function PaymentSection() {
         {customerData.paid ? (
           <div className="text-center py-6">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Check className="h-8 w-8 text-green-600" />
+              <FiCheck className="h-8 w-8 text-green-600" />
             </div>
             <h3 className="text-lg font-semibold text-green-800 mb-2">Payment Complete</h3>
             <p className="text-green-600">Your final files will be ready soon!</p>
@@ -90,19 +90,19 @@ export default function PaymentSection() {
               onClick={handlePayment}
               className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
             >
-              <CreditCard className="h-5 w-5" />
+              <FiCreditCard className="h-5 w-5" />
               <span>Pay ${customerData.amount} Now</span>
             </button>
             
             <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Shield className="h-4 w-4" />
+              <FiShield className="h-4 w-4" />
               <span>Secure payment powered by Stripe</span>
             </div>
           </div>
         ) : (
           <div className="text-center py-6">
             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <CreditCard className="h-8 w-8 text-gray-400" />
+              <FiCreditCard className="h-8 w-8 text-gray-400" />
             </div>
             <h3 className="text-lg font-semibold text-gray-700 mb-2">Payment Pending</h3>
             <p className="text-gray-600">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, ArrowRight, Clock, DollarSign } from 'lucide-react';
+import { FiCalendar, FiArrowRight, FiClock, FiDollarSign } from 'react-icons/fi';
 
 export default function HeroSection() {
   return (
@@ -22,7 +22,7 @@ export default function HeroSection() {
                 rel="noopener noreferrer"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
               >
-                <Calendar className="h-5 w-5" />
+                <FiCalendar className="h-5 w-5" />
                 <span>Schedule a Call</span>
               </a>
               <a
@@ -30,14 +30,14 @@ export default function HeroSection() {
                 className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center justify-center space-x-2"
               >
                 <span>Get Started</span>
-                <ArrowRight className="h-5 w-5" />
+                <FiArrowRight className="h-5 w-5" />
               </a>
             </div>
             
             <div className="grid grid-cols-2 gap-8 mt-12">
               <div className="flex items-center space-x-3">
                 <div className="bg-green-100 p-2 rounded-lg">
-                  <DollarSign className="h-6 w-6 text-green-600" />
+                  <FiDollarSign className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">$700 Saved</div>
@@ -46,7 +46,7 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center space-x-3">
                 <div className="bg-blue-100 p-2 rounded-lg">
-                  <Clock className="h-6 w-6 text-blue-600" />
+                  <FiClock className="h-6 w-6 text-blue-600" />
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">20+ Hours</div>
